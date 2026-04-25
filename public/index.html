@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT Smart Home Pro Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script>
+    if (!localStorage.getItem("homeiq_token")) {
+      window.location.href = "/login.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-icon">⌂</div><div><h2>HomeIQ</h2><span>Smart Control</span></div></div>
+      <nav class="app-nav">
+        <a class="nav-link active" href="#dashboard" data-page="dashboard">Dashboard</a>
+        <a class="nav-link" href="#devices" data-page="devices">Devices</a>
+        <a class="nav-link" href="#trouble" data-page="trouble">Troubleshooting</a>
+        <a class="nav-link" href="#add" data-page="add">Add Device</a>
+      </nav>
+      <div class="side-card"><p>System health</p><strong id="sideHealth">Checking...</strong><small>Live device sync enabled</small></div>
+    </aside>
+    <main class="main-panel">
+      <header class="topbar"><div><p class="eyebrow" id="pageEyebrow">Smart Home IoT Dashboard</p><h1 id="pageTitle">Dashboard overview</h1></div><div class="top-actions"><span id="userBadge" class="user-badge">User</span><button id="themeToggle" class="theme-btn">🌙 Dark</button><button id="logoutBtn" class="ghost-btn">Logout</button></div></header>
+
+      <section id="page-dashboard" class="page active-page">
+        <section class="hero-grid">
+          <article class="hero-card"><span>Total Devices</span><strong id="totalDevices">0</strong><p>Registered devices</p></article>
+          <article class="hero-card"><span>Online</span><strong id="onlineDevices">0</strong><p>Currently active</p></article>
+          <article class="hero-card"><span>Pending</span><strong id="pendingDevices">0</strong><p>Need validation</p></article>
+          <article class="hero-card accent"><span>Avg Battery</span><strong id="avgBattery">0%</strong><p>Across all devices</p></article>
+        </section>
+        <section class="dashboard-layout">
+          <div class="panel wide"><div class="panel-head"><h2>Recent Devices</h2><a href="#devices" class="inline-link">View all</a></div><div id="recentDeviceGrid" class="device-grid compact"></div></div>
+          <div class="panel"><div class="panel-head"><h2>Quick Actions</h2></div><div class="quick-actions"><a href="#add">+ Add new device</a><a href="#trouble">Check troubleshooting</a><button id="seedBtn" class="ghost-btn">Load Samples</button></div></div>
+        </section>
+      </section>
+
+      <section id="page-devices" class="page">
+        <section class="control-strip">
+          <input id="searchInput" type="search" placeholder="Search devices..." />
+          <select id="typeFilter"><option>All</option><option>Light</option><option>Thermostat</option><option>Alarm</option><option>Camera</option><option>Lock</option><option>Fan</option></select>
+          <select id="roomFilter"><option>All</option></select>
+          <select id="statusFilter"><option>All</option><option>Online</option><option>Offline</option></select>
+          <select id="validationFilter"><option>All</option><option>Validated</option><option>Pending</option><option>Rejected</option></select>
+        </section>
+        <div class="panel wide"><div class="panel-head"><h2>All Devices</h2><span id="deviceCount">0 found</span></div><div id="deviceGrid" class="device-grid"></div></div>
+      </section>
+
+      <section id="page-trouble" class="page">
+        <section class="hero-grid three">
+          <article class="hero-card"><span>Offline</span><strong id="offlineDevices">0</strong><p>Need reconnection</p></article>
+          <article class="hero-card"><span>Low Battery</span><strong id="lowBatteryDevices">0</strong><p>Below 40%</p></article>
+          <article class="hero-card"><span>Unvalidated</span><strong id="unvalidatedDevices">0</strong><p>Pending or rejected</p></article>
+        </section>
+        <section class="panel troubleshoot"><div class="panel-head"><h2>Troubleshooting</h2><span>Auto-detected issues</span></div><div id="issuesList" class="issues-list"></div></section>
+      </section>
+
+      <section id="page-add" class="page">
+        <section class="add-layout">
+          <div class="panel add-panel"><div class="panel-head"><h2>Add Device</h2><span>Register a new smart home device</span></div>
+            <form id="deviceForm" class="device-form">
+              <label>Device name<input name="name" placeholder="Living room light" required /></label>
+              <label>Device type<select id="deviceTypeSelect" name="type" required><option>Light</option><option>Thermostat</option><option>Alarm</option><option>Camera</option><option>Lock</option><option>Fan</option></select></label>
+              <label>Room / Location<input name="room" placeholder="Bedroom, Kitchen, Hall" required /></label>
+              <label>Validation<select name="validation"><option>Pending</option><option>Validated</option><option>Rejected</option></select></label>
+              <div id="dynamicFields" class="dynamic-fields"></div>
+              <button type="submit">Add Device</button>
+            </form>
+          </div>
+          <div class="panel tips-panel"><div class="panel-head"><h2>Device Rules</h2></div><div class="tip-list"><div><strong>Validated</strong><span>Device is approved and ready.</span></div><div><strong>Pending</strong><span>Device is waiting for admin approval.</span></div><div><strong>Offline</strong><span>Device appears in troubleshooting.</span></div></div></div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

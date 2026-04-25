@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | HomeIQ</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="auth-body">
+  <button id="authThemeToggle" class="theme-btn auth-theme-btn">🌙 Dark</button>
+  <main class="auth-page">
+    <section class="auth-visual">
+      <div class="brand auth-brand"><div class="brand-icon">⌂</div><div><h2>HomeIQ</h2><span>Smart Home Control</span></div></div>
+      <h1>Create your smart home account.</h1>
+      <p>Your details will be saved in MongoDB, so every user can register and login separately.</p>
+      <div class="auth-stats">
+        <div><strong>MongoDB</strong><span>User data</span></div>
+        <div><strong>Node</strong><span>Backend API</span></div>
+        <div><strong>Express</strong><span>Auth routes</span></div>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <p class="eyebrow">New Account</p>
+      <h2>Register</h2>
+      <p class="auth-subtitle">Create an account to access the dashboard.</p>
+
+      <form id="registerForm" class="auth-form">
+        <label>Full name<input type="text" name="name" placeholder="Enter your name" required /></label>
+        <label>Email<input type="email" name="email" placeholder="Enter your email" required /></label>
+        <label>Password<input type="password" name="password" placeholder="Minimum 4 characters" required minlength="4" /></label>
+        <button type="submit">Create Account</button>
+      </form>
+
+      <p id="authMessage" class="auth-message"></p>
+      <p class="auth-switch">Already registered? <a href="/login.html">Login here</a></p>
+    </section>
+  </main>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>
