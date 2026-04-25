@@ -17,8 +17,7 @@
   "dependencies": {
     "@types/node": "^22.10.7",
     "cors": "^2.8.5",
-    "dns": "^0.2.2",
-    "dotenv": "^16.4.7",
+        "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.9.5",
     "morgan": "^1.10.0"
