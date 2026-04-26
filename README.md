@@ -13,7 +13,7 @@ Full-stack working website made only with syllabus tools: HTML5, CSS3, vanilla J
 - Real MongoDB persistence
 - REST API backend with Express + TypeScript
 - Mongoose schema/model
-- Health API and seed sample devices
+- Health API and seed sample devices.
 
 ## Setup
 
