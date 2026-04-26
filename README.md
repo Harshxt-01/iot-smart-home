@@ -1,4 +1,4 @@
-# IoT Smart Home Pro Dashboard Keeellllaaahhhh
+# IoT Smart Home Pro Dashboard 
 
 Full-stack working website made only with syllabus tools: HTML5, CSS3, vanilla JavaScript, TypeScript, Node.js, Express.js, MongoDB, Mongoose, REST APIs, Git/GitHub-ready structure.
 
