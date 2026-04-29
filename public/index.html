@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HomeIQ | IoT Smart Home Dashboard</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="landing-body dark">
+  <header class="landing-header">
+    <a class="landing-brand" href="/">
+      <span class="landing-logo">⌂</span>
+      <span><strong>HomeIQ</strong><small>Smart Home IoT Dashboard</small></span>
+    </a>
+
+    <nav class="landing-nav">
+      <a href="#features">Features</a>
+      <a href="#workflow">How it works</a>
+      <a href="#devices">Devices</a>
+    </nav>
+
+    <div class="landing-actions">
+      <button id="landingThemeToggle" class="landing-theme">☀️ Light</button>
+      <a class="landing-login" href="/auth.html">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="landing-hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
+      <article class="hero-copy">
+        <span class="landing-pill">⚡ Remote device control • Real-time monitoring</span>
+        <h1>Control your smart home from one intelligent dashboard.</h1>
+        <p>
+          HomeIQ is an IoT device dashboard for smart home devices where users can register,
+          monitor and control connected devices remotely. Administrators can validate devices,
+          while users organize them by room, type and status for faster troubleshooting.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="primary-cta" href="/auth.html">Get Started</a>
+          <a class="secondary-cta" href="#features">Explore Features</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div><strong>24/7</strong><span>Monitoring</span></div>
+          <div><strong>3-step</strong><span>Device setup</span></div>
+          <div><strong>Admin</strong><span>Validation</span></div>
+        </div>
+      </article>
+
+      <article class="hero-showcase">
+        <div class="showcase-image">
+          <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1100&q=80" alt="Smart home control panel" />
+          <div class="live-badge"><span></span> Live Sync Enabled</div>
+        </div>
+
+        <div class="floating-card device-preview-card">
+          <div>
+            <span class="device-icon">💡</span>
+            <strong>Living Room Light</strong>
+            <small>Online • Brightness 85%</small>
+          </div>
+          <button>ON</button>
+        </div>
+
+        <div class="floating-card alert-preview-card">
+          <div>
+            <span class="device-icon">🚨</span>
+            <strong>Smoke Alarm</strong>
+            <small>Validated • Battery 94%</small>
+          </div>
+          <span class="status-dot"></span>
+        </div>
+      </article>
+    </section>
+
+    <section id="features" class="landing-section">
+      <div class="section-heading">
+        <span class="landing-pill">Project Overview</span>
+        <h2>Built for monitoring, control and device validation.</h2>
+        <p>
+          The platform connects the main smart-home operations into a single clean interface,
+          making it easy for users and administrators to manage IoT devices.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">📡</div>
+          <h3>Real-time Monitoring</h3>
+          <p>Track device status, battery level and online/offline activity from a central dashboard.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🎛️</div>
+          <h3>Remote Control</h3>
+          <p>Control lights, thermostats, fans, cameras and alarms without being physically near them.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>Admin Validation</h3>
+          <p>New smart devices can be reviewed and validated by administrators before regular use.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">🛠️</div>
+          <h3>Troubleshooting</h3>
+          <p>Quickly identify pending, offline or rejected devices and take action from the dashboard.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="workflow-section">
+      <div class="workflow-copy">
+        <span class="landing-pill">How it works</span>
+        <h2>A simple workflow for smart-home device management.</h2>
+        <p>
+          Users register their devices, admins validate them, and the dashboard keeps everything
+          organized with filters, search and real-time status indicators.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item"><span>01</span><strong>Register Device</strong><p>Add device name, type, room and configuration details.</p></div>
+        <div class="timeline-item"><span>02</span><strong>Admin Review</strong><p>Devices are validated to keep the system reliable and clean.</p></div>
+        <div class="timeline-item"><span>03</span><strong>Monitor & Control</strong><p>Operate devices remotely and watch live status updates.</p></div>
+      </div>
+    </section>
+
+    <section id="devices" class="device-section">
+      <div class="section-heading">
+        <span class="landing-pill">Supported Controls</span>
+        <h2>Designed for common smart-home devices.</h2>
+      </div>
+
+      <div class="device-type-grid">
+        <div><span>🌡️</span><strong>Thermostats</strong><small>Temperature control</small></div>
+        <div><span>💡</span><strong>Lights</strong><small>Switch and brightness</small></div>
+        <div><span>🚨</span><strong>Alarms</strong><small>Safety monitoring</small></div>
+        <div><span>📷</span><strong>Cameras</strong><small>Room surveillance</small></div>
+        <div><span>🌀</span><strong>Fans</strong><small>Speed settings</small></div>
+        <div><span>🏠</span><strong>Rooms</strong><small>Location filters</small></div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div>
+        <span class="landing-pill">Ready to manage your smart home?</span>
+        <h2>Start monitoring your devices with HomeIQ.</h2>
+      </div>
+      <a class="primary-cta" href="/auth.html">Get Started</a>
+    </section>
+  </main>
+
+  <script>
+    const body = document.body;
+    const btn = document.getElementById("landingThemeToggle");
+
+    function applyTheme() {
+      const saved = localStorage.getItem("theme");
+      if (saved === "light") body.classList.remove("dark");
+      else body.classList.add("dark");
+      btn.textContent = body.classList.contains("dark") ? "☀️ Light" : "🌙 Dark";
+    }
+
+    btn.addEventListener("click", () => {
+      body.classList.toggle("dark");
+      localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+      applyTheme();
+    });
+
+    applyTheme();
+  </script>
+</body>
+</html>

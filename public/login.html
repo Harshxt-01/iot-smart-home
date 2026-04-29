@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | HomeIQ</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="auth-body">
+  <button id="authThemeToggle" class="theme-btn auth-theme-btn">🌙 Dark</button>
+  <main class="auth-page">
+    <section class="auth-visual">
+      <div class="brand auth-brand"><div class="brand-icon">⌂</div><div><h2>HomeIQ</h2><span>Smart Home Control</span></div></div>
+      <h1>Welcome back to your smart home.</h1>
+      <p>Monitor devices, check issues, switch themes and control your IoT dashboard from one clean place.</p>
+      <div class="auth-stats">
+        <div><strong>Live</strong><span>Device sync</span></div>
+        <div><strong>Secure</strong><span>User login</span></div>
+        <div><strong>Smart</strong><span>Home automation</span></div>
+      </div>
+    </section>
+
+    <section class="auth-card">
+      <p class="eyebrow">Account Access</p>
+      <h2>Login</h2>
+      <p class="auth-subtitle">Enter your registered email and password.</p>
+
+      <form id="loginForm" class="auth-form">
+        <label>Email<input type="email" name="email" placeholder="Enter your email" required /></label>
+        <label>Password<input type="password" name="password" placeholder="Enter password" required /></label>
+        <button type="submit">Login to Dashboard</button>
+      </form>
+
+      <p id="authMessage" class="auth-message"></p>
+      <p class="auth-switch"><a href="/forgot-password.html">Forgot password?</a></p>
+      <p class="auth-switch">New user? <a href="/register.html">Create account</a></p>
+    </section>
+  </main>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>
